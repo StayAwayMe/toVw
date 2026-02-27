@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<idea-plugin>
+    <id>com.example.tovw</id>
+    <name>toVW</name>
+    <version>1.0.0</version>
+    <vendor email="support@example.com">杨睡睡</vendor>
+
+    <description><![CDATA[
+        Convert rem values to vw units. Select a number and the plugin will convert it to vw based on the design width (default 375px = 100vw).
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="com.example.tovw.ConvertToVWSettings"/>
+        <projectConfigurable instance="com.example.tovw.ConvertToVWSettingsConfigurable" id="toVW.Settings"/>
+    </extensions>
+
+    <actions>
+        <action id="toVW.ConvertAction"
+                class="com.example.tovw.ConvertToVWAction"
+                text="Convert to VW"
+                description="Convert selected number to vw unit"
+                icon="META-INF/ava.jpg">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt V"/>
+        </action>
+    </actions>
+
+</idea-plugin>

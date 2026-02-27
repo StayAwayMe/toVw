@@ -1,0 +1,19 @@
+allprojects {
+    repositories {
+        all { ArtifactRepository repo ->
+            if (repo instanceof MavenArtifactRepository) {
+                def url = repo.url.toString()
+                if (url.startsWith('https://') || url.startsWith('http://')) {
+                    repo.setAllowInsecureProtocol(true)
+                }
+            }
+        }
+    }
+}
+
+systemProp {
+    javax.net.ssl.trustStore=
+    javax.net.ssl.trustStorePassword=
+    javax.net.ssl.keyStore=
+    javax.net.ssl.keyStorePassword=
+}
