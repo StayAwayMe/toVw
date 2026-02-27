@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<idea-plugin>
+<idea-plugin icon="/META-INF/ava.jpg">
     <id>com.example.tovw</id>
     <name>toVW</name>
     <version>1.0.0</version>
@@ -21,7 +21,7 @@
                 class="com.example.tovw.ConvertToVWAction"
                 text="Convert to VW"
                 description="Convert selected number to vw unit"
-                icon="META-INF/ava.jpg">
+                icon="META-INF/pluginIcon.png">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt V"/>
         </action>

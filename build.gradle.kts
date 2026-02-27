@@ -27,8 +27,8 @@ intellij {
 tasks {
     // 设置 Java 编译版本（兼容 Java 11）
     withType<JavaCompile> {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
         options.encoding = "UTF-8"
     }
 
